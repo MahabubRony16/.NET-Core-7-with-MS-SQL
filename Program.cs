@@ -1,3 +1,8 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,6 +30,21 @@ builder.Services.AddCors((options) =>
             });
     });
 
+// builder.Services.AddScoped<IUserRipository, UserRepository>();
+string? builderTokenKeyString = builder.Configuration.GetSection("AppSettings:TokenKey").Value;
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(Options => {
+            Options.TokenValidationParameters = new TokenValidationParameters()
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
+                    builderTokenKeyString != null ? builderTokenKeyString : ""
+                )),
+                ValidateIssuer = false,
+                ValidateAudience = false
+            };
+        });
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,6 +59,8 @@ else
     app.UseCors("ProdCors");
     app.UseHttpsRedirection();
 }
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
