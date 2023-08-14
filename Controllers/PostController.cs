@@ -9,6 +9,7 @@ using Microsoft.Extensions.Options;
 
 namespace DotnetAPI.Controllers
 {
+    //This is from Rony-16
     [Authorize]
     [ApiController]
     [Route("[controller]")]
