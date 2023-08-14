@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\dotnet-course-code\\DotnetWebApi\\DotnetWebApi.csproj": {}
+    "C:\\Users\\HP\\Documents\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\dotnet-course-code\\DotnetWebApi\\DotnetWebApi.csproj": {
+    "C:\\Users\\HP\\Documents\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\dotnet-course-code\\DotnetWebApi\\DotnetWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetWebApi.csproj",
         "projectName": "DotnetWebApi",
-        "projectPath": "C:\\Users\\HP\\dotnet-course-code\\DotnetWebApi\\DotnetWebApi.csproj",
+        "projectPath": "C:\\Users\\HP\\Documents\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetWebApi.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\dotnet-course-code\\DotnetWebApi\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\GitHub\\.NET-Core-7-with-MS-SQL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

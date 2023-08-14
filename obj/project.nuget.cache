@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0b7lEudYTHg3SYAff6EPITYTvWICGwseB7bOStsrJSRkfyxbik5LKS+dRyL8IvtZ31HNDb2E4hd476VZ0aiZYg==",
+  "dgSpecHash": "b2pX5rBJCCRVj2xJUXQV/OTYtQsRaWVrXCcwGAT0NS5WhoTg55t5UVEiVAEKEhL2c3BN5u40zi18jitIqariYA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\dotnet-course-code\\DotnetWebApi\\DotnetWebApi.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Documents\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
