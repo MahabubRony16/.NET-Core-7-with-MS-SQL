@@ -202,3 +202,4 @@ C:\Users\HP\Documents\GitHub\.NET-Core-7-with-MS-SQL\obj\Debug\net7.0\refint\Dot
 C:\Users\HP\Documents\GitHub\.NET-Core-7-with-MS-SQL\obj\Debug\net7.0\DotnetWebApi.pdb
 C:\Users\HP\Documents\GitHub\.NET-Core-7-with-MS-SQL\obj\Debug\net7.0\DotnetWebApi.genruntimeconfig.cache
 C:\Users\HP\Documents\GitHub\.NET-Core-7-with-MS-SQL\obj\Debug\net7.0\ref\DotnetWebApi.dll
+C:\Users\HP\Documents\GitHub\.NET-Core-7-with-MS-SQL\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
