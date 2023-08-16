@@ -7,7 +7,7 @@ using System.Text;
 using Dapper;
 using DotnetAPI.Data;
 using DotnetAPI.Helpers;
-using DotnetWebApi.Dtos;
+using DotnetApi.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.AspNetCore.Mvc;

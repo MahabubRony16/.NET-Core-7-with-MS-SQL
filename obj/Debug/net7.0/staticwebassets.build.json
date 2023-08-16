@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "HVxZvj8J2SNoxrg0QDcqqmqdvWQYQpCGAbi94nLS7G4=",
-  "Source": "DotnetWebApi",
-  "BasePath": "_content/DotnetWebApi",
+  "Hash": "EG3mgwMeCfem+ug7IFC/dLRxTXLqw/6KWLJlhmCtQQ4=",
+  "Source": "DotnetApi",
+  "BasePath": "_content/DotnetApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

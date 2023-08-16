@@ -1,4 +1,4 @@
-namespace DotnetWebApi.Dtos
+namespace DotnetApi.Dtos
 {
     public partial class UserForRegistrationDto
     {

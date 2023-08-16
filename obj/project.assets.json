@@ -3082,26 +3082,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Documents\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetWebApi.csproj",
-      "projectName": "DotnetWebApi",
-      "projectPath": "C:\\Users\\HP\\Documents\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetWebApi.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Documents\\GitHub\\.NET-Core-7-with-MS-SQL\\obj\\",
+      "projectUniqueName": "E:\\CODE\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetApi.csproj",
+      "projectName": "DotnetApi",
+      "projectPath": "E:\\CODE\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetApi.csproj",
+      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+      "outputPath": "E:\\CODE\\GitHub\\.NET-Core-7-with-MS-SQL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },

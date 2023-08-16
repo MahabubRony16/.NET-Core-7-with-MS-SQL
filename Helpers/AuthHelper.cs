@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using Dapper;
 using DotnetAPI.Data;
-using DotnetWebApi.Dtos;
+using DotnetApi.Dtos;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.Data.SqlClient;
 using Microsoft.IdentityModel.Tokens;
