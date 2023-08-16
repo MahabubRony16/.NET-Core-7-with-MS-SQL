@@ -25,6 +25,7 @@ namespace DotnetAPI.Data
             return dbConnection.QuerySingle<T>(sql);
         }
 
+
         public bool ExecuteSql(string sql)
         {
             IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
@@ -37,23 +38,24 @@ namespace DotnetAPI.Data
             return dbConnection.Execute(sql);
         }
 
-        public bool ExecuteSqlWithParameters(string sql, List<SqlParameter> parameters) 
+        public bool ExecuteSqlWithParameters(string sql, DynamicParameters parameters) 
         {
-            SqlCommand commandWithParameters = new SqlCommand(sql);
 
-            foreach(SqlParameter parameter in parameters)
-            {
-                commandWithParameters.Parameters.Add(parameter);
-            }
-            SqlConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
-            dbConnection.Open();
+            IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+            return dbConnection.Execute(sql, parameters) > 0;
+        }
 
-            commandWithParameters.Connection = dbConnection;
+        public IEnumerable<T> LoadDataWithParameters<T>(string sql, DynamicParameters parameters)
+        {
+            
+            IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+            return dbConnection.Query<T>(sql, parameters);
+        }
 
-            int rowsAffected = commandWithParameters.ExecuteNonQuery();
-            dbConnection.Close();
-
-            return rowsAffected > 0;
+        public T LoadDataSingleWithParameters<T>(string sql, DynamicParameters parameters)
+        {
+            IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+            return dbConnection.QuerySingle<T>(sql, parameters);
         }
     }
 }

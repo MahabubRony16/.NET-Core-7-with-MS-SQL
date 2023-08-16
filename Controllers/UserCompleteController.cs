@@ -1,5 +1,6 @@
+using System.Data;
+using Dapper;
 using DotnetAPI.Data;
-using DotnetAPI.Dtos;
 using DotnetAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,23 +23,30 @@ public class UserCompleteController : ControllerBase
     }
 
     [HttpGet("GetUsers/{userId}/{isActive}")]
-    // public IEnumerable<User> GetUsers()
     public IEnumerable<UserComplete> GetUsers(int userId, bool isActive)
     {
         string sql = @"EXEC TutorialAppSchema.spUsers_Get";
-        string parameters = "";
+        string stringParameters = "";
+        DynamicParameters sqlParameters = new DynamicParameters();
 
         if(userId != 0)
         {
-            parameters += ", @UserId = " + userId.ToString();
+            stringParameters += ", @UserId = @UserIdParam";
+            sqlParameters.Add("@UserIdParam", userId, DbType.Int32);
         }
         if(isActive)
         {
-            parameters += ", @Active = " + isActive.ToString();
+            stringParameters += ", @Active = @ActiveParam";
+            sqlParameters.Add("@ActiveParam", isActive, DbType.Boolean);
         }
-        sql += parameters.Substring(1);
+        if (stringParameters.Length > 0)
+        {
+            sql += stringParameters.Substring(1);
+        }
+
+        Console.WriteLine(sql);
         
-        IEnumerable<UserComplete> users = _dapper.LoadData<UserComplete>(sql);
+        IEnumerable<UserComplete> users = _dapper.LoadDataWithParameters<UserComplete>(sql, sqlParameters);
         return users;
     }
 
@@ -47,17 +55,29 @@ public class UserCompleteController : ControllerBase
     {
 
         string sql = @"EXEC TutorialAppSchema.spUser_Upsert
-                    @FirstName = '" + user.FirstName + 
-                "', @LastName = '" + user.LastName +
-                "', @Email = '" + user.Email + 
-                "', @Gender = '" + user.Gender + 
-                "', @Active = '" + user.Active + 
-                "', @JobTitle = '" + user.JobTitle + 
-                "', @Department = '" + user.Department + 
-                "', @Salary = '" + user.Salary + 
-                "', @UserId = " + user.UserId;
+                    @FirstName = @FirstNameParam
+                    , @LastName = @LastNameParam
+                    , @Email = @EmailParam
+                    , @Gender = @GenderParam
+                    , @Active = @ActiveParam
+                    , @JobTitle = @JobTitleParam
+                    , @Department = @DepartmentParam
+                    , @Salary = @SalaryParam
+                    , @UserId = @UserIdParam";
 
-        if (_dapper.ExecuteSql(sql))
+        DynamicParameters sqlParameters = new DynamicParameters();
+        sqlParameters.Add("@FirstNameParam", user.FirstName, DbType.String);
+        sqlParameters.Add("@LastNameParam", user.LastName, DbType.String);
+        sqlParameters.Add("@EmailParam", user.Email, DbType.String);
+        sqlParameters.Add("@GenderParam", user.Gender, DbType.String);
+        sqlParameters.Add("@ActiveParam", user.Active, DbType.Byte);
+        sqlParameters.Add("@JobTitleParam", user.JobTitle, DbType.String);
+        sqlParameters.Add("@DepartmentParam", user.Department, DbType.String);
+        sqlParameters.Add("@SalaryParam", user.Salary, DbType.Decimal);
+        sqlParameters.Add("@UserIdParam", user.UserId, DbType.Int32);
+
+
+        if (_dapper.ExecuteSqlWithParameters(sql, sqlParameters))
         {
             return Ok();
         } 
@@ -69,9 +89,12 @@ public class UserCompleteController : ControllerBase
     public IActionResult DeleteUser(int userId)
     {
         string sql = @"TutorialAppSchema.spUser_Delete
-                    @UserId =  " + userId.ToString();
+                    @UserId =  @UserIdParam";
 
-        if (_dapper.ExecuteSql(sql))
+        DynamicParameters sqlParameters = new DynamicParameters();
+        sqlParameters.Add("@UserIdParam", userId, DbType.Int32);
+
+        if (_dapper.ExecuteSqlWithParameters(sql, sqlParameters))
         {
             return Ok();
         } 
