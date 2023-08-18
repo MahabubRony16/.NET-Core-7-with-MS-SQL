@@ -3087,9 +3087,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\CODE\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetWebApi.csproj",
-      "projectName": "DotnetWebApi",
-      "projectPath": "E:\\CODE\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetWebApi.csproj",
+      "projectUniqueName": "E:\\CODE\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetApi.csproj",
+      "projectName": "DotnetApi",
+      "projectPath": "E:\\CODE\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetApi.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
       "outputPath": "E:\\CODE\\GitHub\\.NET-Core-7-with-MS-SQL\\obj\\",
       "projectStyle": "PackageReference",

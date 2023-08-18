@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J+LyF6nrhS38PeO5qyct5JI+bTM/rwndRC6iPbSisep2QuyyYUiQdFozZZLzvxzvfvEW+qPnTToVBF2fqowESQ==",
+  "dgSpecHash": "+oQLwLQ+3I1yVLXiVFpawQkTgKzOrtO39iGA3brb2+kSqhtn+VScWz9Rduv5tUP8qLUaChkLILPfJB6777yn8A==",
   "success": true,
-  "projectFilePath": "E:\\CODE\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetWebApi.csproj",
+  "projectFilePath": "E:\\CODE\\GitHub\\.NET-Core-7-with-MS-SQL\\DotnetApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
