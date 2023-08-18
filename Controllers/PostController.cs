@@ -52,7 +52,7 @@ namespace DotnetAPI.Controllers
             System.Console.WriteLine(sql);
             return _dapper.LoadDataWithParameters<Post>(sql, sqlParameters);
         }
-
+        
         [HttpGet("MyPosts")]
         public IEnumerable<Post> GetMyPosts()
         {

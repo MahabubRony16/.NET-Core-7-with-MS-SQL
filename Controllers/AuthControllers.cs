@@ -111,7 +111,7 @@ namespace DotnetApi.Controllers
                     return StatusCode(401, "Incorrect Password!");
                 }
             }
-
+            
             string userIdSql = @"SELECT [UserId]
                                 FROM [TutorialAppSchema].[Users]
                                 WHERE Email = '" + userForLogin.Email + "'";
